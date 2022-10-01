@@ -1,0 +1,169 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: v.$Font-Poppins;
+    background-color: v.$Red;
+    background-image: url('/images/bg-intro-mobile.png');
+    color: white;
+    font-size: 16px;
+}
+.main-container{
+    .section-container{
+        width: 330px;
+        margin: 96px auto 40px;
+        //Content 1
+        &__content1{
+            text-align: center;
+        }
+        &__title{
+            width: 235px;
+            font-size: 1.7em;
+            line-height: 38px;
+            margin: -10px auto 16px;
+        }
+        &__description{
+            margin: 0 10px 68px;
+        }
+        //Content 2
+        &__content2{
+            text-align: center;
+        }
+        &__days{
+            background-color: v.$Blue;
+            width: 330px;
+            height: 90px;
+            padding: 22px 75px;
+            border-radius: 10px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 0 v.$Blue-shadow;
+        }
+        &__days-span{
+            font-weight: 100;
+        }
+
+        //Form
+        &__form{
+            background-color: white;
+            border-radius: 10px;
+            padding: 24px;
+            box-shadow: 0 6px 0 v.$Red-shadow;
+        }
+      
+        &__form-first-name{
+            @include m.input();
+        }
+
+        //Container Error
+        &__form-error{
+            position: relative;
+        }
+        &__form-img{
+            position: absolute; 
+            right: 15px;
+            top: -46px;
+        }
+        &__form-first-name-validation{
+            color: v.$Red;
+            font-style: italic;
+            text-align: right;
+            font-size: 12px;
+            margin: -12px 0 18px
+        }
+        &__form-last-name{
+            @include m.input();
+        }
+        &__form-email{
+            @include m.input();
+        }
+        &__form-password{
+            @include m.input();
+        }
+        &__form-button{
+            background-color: v.$Green;
+            color: white;
+            text-transform: uppercase;
+            font-size: 1em;
+            width: 100%;
+            height: 55px;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 3px 0 v.$Green-shadow;
+            margin-bottom: 15px;
+        }
+        &__form-button:hover{
+            cursor: pointer;
+        }
+        &__form-description{
+            color: v.$Grayish-Blue;
+            font-size: 0.7em;
+            line-height: 22px;
+            margin: 0 14px;
+            text-align: center;
+        }
+        &__form-description-span{
+            color: v.$Red;
+            text-decoration: none;
+            font-weight: 700;
+        }
+    }
+}
+
+//================ Desktop ==================//
+@media (min-width: 900px){
+    .main-container{
+        .section-container{
+            display: flex;
+            width: 1114px;
+            &__content1{
+                padding-top: 200px;
+                width: 570px;
+            }
+            &__title{
+                font-size: 3em;
+                width: 414px;
+                line-height: 55px;
+                margin-bottom: 30px;
+                margin-left: 5px;
+            }
+            &__description{
+                text-align: left;
+            }
+
+            &__content2{
+               width: 540px;
+            }
+            &__days{
+                width: 100%;
+                height: 60px;
+            }
+        }
+    }
+   
+}
+// =============== Footer ================== //
+.attribution { 
+    margin-bottom: 20px;
+    font-size: 14px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(0, 0%, 86%); 
+    text-decoration: none;
+}
+.attribution a:hover { 
+    color: hsl(0, 0%, 0%); 
+}

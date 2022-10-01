@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <main class="main-container">
+    <section class="section-container">
+      <div class="section-container__content1">
+        <h1 class="section-container__title">Learn to code by watching others</h1>
+        <p class="section-container__description">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable. </p>
+      </div>
+      <div class="section-container__content2">
+        <p class="section-container__days">Try it free 7 days <span class="section-container__days-span">then $20/mo. thereafter</span></p>
+        <form class="section-container__form">
+          <input class="section-container__form-first-name" type="text" placeholder="First Name">
+          <div id="firstNameError" class="section-container__form-error">
+          </div>
+          <input class="section-container__form-last-name" type="text" placeholder="Last Name ">
+          <div id="lastNameError"class="section-container__form-error"></div>
+          <input class="section-container__form-email" type="email" placeholder="Email Address">
+          <div id="emailError" class="section-container__form-error"></div>
+          <input class="section-container__form-password" type="password" placeholder="Password">
+          <div id="passwordError" class="section-container__form-error"></div>
+          <button id="button" class="section-container__form-button">Claim your free trial</button>
+          <p class="section-container__form-description">By clicking the button, you are agreeing to our <span class="section-container__form-description-span">Terms and Services</span></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/JuanValencia247" target="_blank">JC</a>.
+    </p>
+  </footer>
+  <script src="./js/main.js" ></script>
+</body>
+</html>
